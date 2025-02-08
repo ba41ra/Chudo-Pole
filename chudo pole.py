@@ -1,4 +1,5 @@
 secret_word = input("Введите слово для игры:")
+print("\033[2J")
 win = False
 true_letters = []
 all_letters = []
@@ -12,6 +13,7 @@ while win == False:
         print(f"Вы отгадали букву {letter}, откройте нам её:")
         points[counter] +=1
         true_letters.append(letter)
+        all_letters.append(letter)
     else:
         print("Такой буквы в этом слове нет...")
         all_letters.append(letter)
